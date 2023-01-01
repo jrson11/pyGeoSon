@@ -9,8 +9,11 @@ A python library for Geo Engineers ;)
 - Shallow Foundation
   - Square
 - Deep Foundation
-  - 
-  - Drilled Shaft
+  - Pile 1
+    - Augue Cast Pile
+  - Pile 2
+    - Drilled Shaft
+    - Helical Pile
 - Settlement
   - Shallow Foundation Settlement
   - Deep Foundation Downdrag Force
