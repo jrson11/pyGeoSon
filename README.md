@@ -2,7 +2,7 @@
 A python library for Geo Engineers ;)
 
 
-## Ground Modeling
+## 1. Ground Modeling
   - Soil Boring
   - SPT
   - CPT
