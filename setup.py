@@ -21,7 +21,7 @@ setup(
     #
     packages=find_packages()
     install_requires=[]
-    keywords=['python','civil','geotechnical','engineering','geotechnics']
+    keywords=['python','civil','geotechnical','engineering','geotechnics','foundation','design','settlement','API','FHWA']
     include_package_data=True,
     python_requires='>=3.6',
 )
