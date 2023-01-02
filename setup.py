@@ -10,6 +10,11 @@ VERSION='0.0.1'
 AUTHORS='Jungrak Son, Yichuan Zhu'
 DESCRIPTION='A Python Library for Geotechnical Engineering'
 
+# Version
+
+# Long description
+
+# Setting up
 setup(
     name="pyGeoSon",
     version=VERSION,
