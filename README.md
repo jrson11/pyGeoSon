@@ -14,10 +14,14 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
 - Shallow Foundation
   - Square
 - Deep Foundation
-  - Pile 1
-    - Augue Cast Pile
-  - Pile 2
-    - Drilled Shaft
+  - Driven Pile
+    - H Pile
+    - Pipe Pile
+    - Precase Prestressed Concrete Pile
+  - Drilled Pile
+    - Auger Cast Pile (CFA/DACP)
+    - Drilled Shaft (CIDH)
+    - Micropiles
     - Helical Pile
 - Settlement
   - Shallow Foundation Settlement
