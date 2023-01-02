@@ -12,7 +12,8 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
   - Soil Boring Log
   - CPT
 - Shallow Foundation
-  - Square
+  - Square Type
+  - Circle Type
 - Deep Foundation
   - Driven Pile
     - H Pile
