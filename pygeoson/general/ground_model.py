@@ -71,7 +71,7 @@ def export_output(df_SOIL):
     df_ground['UW_eff[pcf]'] = np.nan
     df_ground['Su[psf]'] = np.nan
     df_ground['ϕ[deg]'] = np.nan
-    df_ground['Soil_Type[N/NC]'] = np.nan
+    df_ground['Soil_Type[C/NC]'] = np.nan
     #
     # Ground Modeling
     idx = 0
@@ -90,9 +90,9 @@ def export_output(df_SOIL):
         df_ground.loc[i,'ϕ[deg]'] = df_soil.loc[idx,'ϕ[deg]']
         #
         if df_ground.loc[i,'ϕ[deg]'] == 0:
-            df_ground.loc[i,'Soil_Type[N/NC]'] = 'C'
+            df_ground.loc[i,'Soil_Type[C/NC]'] = 'C'
         else:
-            df_ground.loc[i,'Soil_Type[N/NC]'] = 'NC'
+            df_ground.loc[i,'Soil_Type[C/NC]'] = 'NC'
     #
     # Calculation
     df_ground['Depth[ft]'] = zmax - df_ground['Elevation[ft]']
