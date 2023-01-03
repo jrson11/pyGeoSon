@@ -16,5 +16,5 @@ df_ground = gm.export_output(df_soil)
 #gm.convert_df_to_Excel(df_ground).to_excel(outputfile, index=False)
 
 ## FHWA
-df_new1 = ac.FHWA.NcNqNg(df_ground)
-df_new2 = ac.FHWA.skin_friction(df_new1)
+df_new = ac.axial_capacity(df_ground)
+
