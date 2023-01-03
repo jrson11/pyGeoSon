@@ -13,7 +13,7 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
   - CPT
 - Shallow Foundation
   - Square Type
-  - Circle Type
+  - Circular Type
 - Deep Foundation
   - Lateral response (LPILE)
   - Axial response of Driven Pile (APILE)
