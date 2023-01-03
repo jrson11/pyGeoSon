@@ -10,7 +10,7 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
 
 - Site Investigation
   - Soil Boring Log
-  - CPT
+  - Geotechnical CPT
   - Geophysics
 - Shallow Foundation
   - Square Type
