@@ -18,9 +18,6 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
 - Deep Foundation
   - Lateral response (LPILE)
   - Axial response of Driven Pile (APILE)
-    - H Pile
-    - Pipe Pile
-    - Precase Prestressed Concrete Pile
   - Axial response of Drilled Shaft (SHAFT)
     - Auger Cast Pile (CFA/DACP)
     - Drilled Shaft (CIDH)
