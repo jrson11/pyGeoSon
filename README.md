@@ -15,18 +15,20 @@ pyGeoSon supports Python 3.6 orhigher, and depends on **Numpy**, **Pandas**, **M
   - Square Type
   - Circle Type
 - Deep Foundation
-  - Driven Pile
+  - Lateral response (LPILE)
+  - Axial response of Driven Pile (APILE)
     - H Pile
     - Pipe Pile
     - Precase Prestressed Concrete Pile
-  - Drilled Pile
+  - Axial response of Drilled Shaft (SHAFT)
     - Auger Cast Pile (CFA/DACP)
     - Drilled Shaft (CIDH)
+  - Axial response of Others
     - Micropiles
     - Helical Pile
 - Settlement
-  - Shallow Foundation Settlement
-  - Deep Foundation Downdrag Force
+  - Consolidation (Settle3)
+  - Deep Foundation Downdrag Force (TZPILE)
 - Project Management
 
 ## Examples
