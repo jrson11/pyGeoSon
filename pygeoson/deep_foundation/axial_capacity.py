@@ -73,6 +73,12 @@ class FHWA():
         # --> Qp = Ap*q*alpha*Nq'
         # But, following the limiting value from (Meyerhof,1976)
         
-        
-        
         return df_ground
+
+    def axial_capacity(df_ground):
+        df_new1 = FHWA.NcNqNg(df_ground)
+        df_new2 = FHWA.skin_friction(df_new1)
+        df_new3 = FHWA.end_bearing(df_new2)
+        
+        return df_new3
+    
