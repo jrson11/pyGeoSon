@@ -30,9 +30,9 @@ def generate_template():
     df_soil.loc[0,'Top_Elevation'] = '[ft]'
     df_soil.loc[0,'Base_Elevation'] = '[ft]'
     df_soil.loc[0,'Thickness'] = '[ft]'
-    df_soil.loc[0,'Eff_Unit_Weight'] = '[pcf]'
-    df_soil.loc[0,'Shear_Strength'] = '[psf]'
-    df_soil.loc[0,'Friction_Angle'] = '[deg]'
+    df_soil.loc[0,'UW_eff'] = '[pcf]'
+    df_soil.loc[0,'Su'] = '[psf]'
+    df_soil.loc[0,'ϕ'] = '[deg]'
     
     return df_proj
 
@@ -68,9 +68,9 @@ def export_output(df_SOIL):
     df_ground = pd.DataFrame()
     df_ground['Elevation[ft]'] = zz
     df_ground['Soil_Unit[-]'] = np.nan
-    df_ground['Eff_Unit_Weight[pcf]'] = np.nan
-    df_ground['Shear_Strength[psf]'] = np.nan
-    df_ground['Friction_Angle[deg]'] = np.nan
+    df_ground['UW_eff[pcf]'] = np.nan
+    df_ground['Su[psf]'] = np.nan
+    df_ground['ϕ[deg]'] = np.nan
     df_ground['Soil_Type[N/NC]'] = np.nan
     #
     # Ground Modeling
@@ -85,18 +85,18 @@ def export_output(df_SOIL):
                 idx = idx + 1
         # 
         df_ground.loc[i,'Soil_Unit[-]'] = df_soil.loc[idx,'Soil_Unit[-]']
-        df_ground.loc[i,'Eff_Unit_Weight[pcf]'] = df_soil.loc[idx,'Eff_Unit_Weight[pcf]']
-        df_ground.loc[i,'Shear_Strength[psf]'] = df_soil.loc[idx,'Shear_Strength[psf]']
-        df_ground.loc[i,'Friction_Angle[deg]'] = df_soil.loc[idx,'Friction_Angle[deg]']
+        df_ground.loc[i,'UW_eff[pcf]'] = df_soil.loc[idx,'UW_eff[pcf]']
+        df_ground.loc[i,'Su[psf]'] = df_soil.loc[idx,'Su[psf]']
+        df_ground.loc[i,'ϕ[deg]'] = df_soil.loc[idx,'ϕ[deg]']
         #
-        if df_ground.loc[i,'Friction_Angle[deg]'] == 0:
+        if df_ground.loc[i,'ϕ[deg]'] == 0:
             df_ground.loc[i,'Soil_Type[N/NC]'] = 'C'
         else:
             df_ground.loc[i,'Soil_Type[N/NC]'] = 'NC'
     #
     # Calculation
     df_ground['Depth[ft]'] = zmax - df_ground['Elevation[ft]']
-    df_ground['del_σv_eff[psf]'] = df_ground['Eff_Unit_Weight[pcf]']*dz
+    df_ground['del_σv_eff[psf]'] = df_ground['UW_eff[pcf]']*dz
     df_ground.loc[0,'del_σv_eff[psf]'] = 0
     df_ground['σv_eff[psf]'] = np.cumsum(df_ground['del_σv_eff[psf]'])
     
