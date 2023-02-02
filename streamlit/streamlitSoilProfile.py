@@ -48,7 +48,7 @@ for i in range(3):
     fig.update_layout(shapes=[dict(type='rect', xref='x', yref='y',
                                 x0=1, y0=profile_2.loc[i,'Depth from [m]'],
                                 x1=2, y1=profile_2.loc[i,'Depth to [m]'])],
-                                fillcolor='LightPink', line_color='Crimson')
+                                )
 #
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
                          mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
