@@ -65,43 +65,7 @@ fig['layout']['yaxis']['title']='Depth [m]'
 fig['layout']['xaxis']['title']=' '
 fig['layout']['xaxis2']['title']='[KN/m3]'
 fig['layout']['xaxis3']['title']='[MPa]'
-fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
+fig.update_layout(height=600, width=800, title_text="")
 #
 st.plotly_chart(fig)
 
-
-'''
-fig = profile_2.plot_profile(
-    parameters=(('Total unit weight [kN/m3]',), ('qc [MPa]', 'qt [MPa]')),
-    showlegends=((False,), (True, True)),
-    xtitles=(r'$ \gamma \ \text{[kN/m} ^3 \text{]} $', r'$ q_c, \ q_t \ \text{[MPa]} $'),
-    ztitle=r'$ z \ \text{[m]} $',
-    xranges=((15, 22), (0, 60)),
-    zrange=(10, 0),
-    fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
-
-
-fig = go.Figure()
-#
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='hv', name='hv'))
-#fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='vh', name='vh'))
-#fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'], line_shape='hv', name='hv2'))
-#fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'], line_shape='vh', name='vh2'))
-fig.update_yaxes(autorange="reversed")
-fig.update_layout(autosize=False,width=400,height=700)
-#
-st.plotly_chart(fig)
-
-
-fig = make_subplots(rows=1, cols=2)
-#
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='vh', name='UW'), row=1,col=1)
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='linear', name='UW'), row=1,col=1)
-#
-fig.add_trace(go.Scatter(x=profile_2['qc from [MPa]'], y=profile_2['Depth from [m]'], line_shape='linear', name='qc'), row=1,col=2)
-#
-fig.update_yaxes(autorange="reversed")
-fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
-#
-st.plotly_chart(fig)
-'''
