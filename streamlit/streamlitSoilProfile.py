@@ -28,6 +28,7 @@ profile_2 = sp.SoilProfile({
     'qt [MPa]': [3.5, 1.25, 6, 45],
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
+'''
 fig = profile_2.plot_profile(
     parameters=(('Total unit weight [kN/m3]',), ('qc [MPa]', 'qt [MPa]')),
     showlegends=((False,), (True, True)),
@@ -36,7 +37,22 @@ fig = profile_2.plot_profile(
     xranges=((15, 22), (0, 60)),
     zrange=(10, 0),
     fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
+'''
+import plotly.figure_factory as ff
 
+# Add histogram data
+x1 = np.random.randn(200) - 2
+x2 = np.random.randn(200)
+x3 = np.random.randn(200) + 2
 
-#fig = go.Figure(data=[{'type': 'scatter', 'y': [1,2,3]}])
+# Group data together
+hist_data = [x1, x2, x3]
+
+group_labels = ['Group 1', 'Group 2', 'Group 3']
+
+# Create distplot with custom bin_size
+fig = ff.create_distplot(
+        hist_data, group_labels, bin_size=[.1, .25, .5])
+
+# Plot!
 st.plotly_chart(fig, use_container_width=True)
