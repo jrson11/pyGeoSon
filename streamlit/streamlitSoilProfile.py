@@ -14,3 +14,6 @@ Back-End =============================================
   - Author: J.Son (jon.jungrak.son@gmail.com)
   - Last update: 2/2/2023
 '''
+
+## Initialization
+from groundhog.general import soilprofile as sp
