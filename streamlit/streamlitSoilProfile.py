@@ -44,7 +44,7 @@ st.dataframe(df)
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
-for i in range(len(profile_2)):
+for i in range(len(df)):
     fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
 #
 fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth from [m]'],
