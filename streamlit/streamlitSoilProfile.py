@@ -44,7 +44,7 @@ profile_2 = sp.SoilProfile({
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
-for i in range(3):
+for i in range(len(profile_2)):
     fig.add_trace(go.Scatter(x=[1,2],y=[profile_2.loc[i,'Depth from [m]'],profile_2.loc[i,'Depth to [m]']]), row=1,col=1)
 #
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
