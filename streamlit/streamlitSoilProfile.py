@@ -32,7 +32,7 @@ profile_2 = sp.SoilProfile({
 })
 
 
-colors = plotly.colors.DEFAULT_PLOTLY_COLORS
+colors = plot.colors.DEFAULT_PLOTLY_COLORS
 
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
