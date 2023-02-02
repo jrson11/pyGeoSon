@@ -38,12 +38,7 @@ fig = profile_2.plot_profile(
     zrange=(10, 0),
     fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
 '''
-import plotly.express as px
 
-import plotly.express as px
-
-df = px.data.stocks()
-fig = px.line(df, x='date', y="GOOG")
 
 
 st.plotly_chart(fig, use_container_width=True)
