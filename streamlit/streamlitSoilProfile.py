@@ -23,7 +23,7 @@ st.sidebar.markdown('### Outputs')
 option_output = st.sidebar.button('Download the result')
 
 st.sidebar.markdown('### Interpretation')
-option_depth = st.sidebar.slider('Depth to draw guideline', 0, 10, 2)  # min, max, default
+option_depth = st.sidebar.slider('Depth to draw a guideline in plots', 0, 10, 2)  # min, max, default
 
 
 
