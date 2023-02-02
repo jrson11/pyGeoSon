@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import plotly.figure_factory as ff
 import plotly.graph_objs as go
-from plotly.offline import init_notebook_mode, iplot, download_plotlyjs
 from groundhog.general import soilprofile as sp
 
 
