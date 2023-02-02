@@ -59,7 +59,10 @@ fig.add_trace(go.Scatter(x=profile_2['qt [MPa]'], y=profile_2['Depth to [m]'],
                          mode='lines+markers', name='qt'), row=1,col=3)
 #
 fig.update_yaxes(autorange="reversed")
-fig['layout']['xaxis']['title']='Label x-axis 1'
+fig['layout']['yaxis']['title']='Depth [m]'
+fig['layout']['xaxis']['title']=' '
+fig['layout']['xaxis2']['title']='[KN/m3]'
+fig['layout']['xaxis3']['title']='[MPa]'
 fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
 #
 st.plotly_chart(fig)
