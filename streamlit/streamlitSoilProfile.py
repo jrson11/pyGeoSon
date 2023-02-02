@@ -30,6 +30,10 @@ profile_2 = sp.SoilProfile({
     'qt [MPa]': [3.5, 1.25, 6, 45],
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
+
+
+
+
 '''
 fig = profile_2.plot_profile(
     parameters=(('Total unit weight [kN/m3]',), ('qc [MPa]', 'qt [MPa]')),
@@ -39,7 +43,7 @@ fig = profile_2.plot_profile(
     xranges=((15, 22), (0, 60)),
     zrange=(10, 0),
     fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
-'''
+
 
 fig = go.Figure()
 #
@@ -64,3 +68,4 @@ fig.update_yaxes(autorange="reversed")
 fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
 #
 st.plotly_chart(fig)
+'''
