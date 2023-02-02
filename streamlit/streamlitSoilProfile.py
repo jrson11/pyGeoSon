@@ -35,9 +35,9 @@ fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
 #
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
-                         mode='lines', line_shape='vh'), row=1,col=2)
+                         mode='lines+markers', line_shape='vh'), row=1,col=2)
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'],
-                         mode='markers', name='UW'), row=1,col=2)
+                         mode='lines+markers', line_shape='vh'), row=1,col=2)
 #
 fig.add_trace(go.Scatter(x=profile_2['qt [MPa]'], y=profile_2['Depth to [m]'],
                          mode='lines+markers', name='qc'), row=1,col=3)
