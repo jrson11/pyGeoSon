@@ -28,8 +28,15 @@ profile_2 = sp.SoilProfile({
     'qt [MPa]': [3.5, 1.25, 6, 45],
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
-    
+fig = profile_2.plot_profile(
+    parameters=(('Total unit weight [kN/m3]',), ('qc [MPa]', 'qt [MPa]')),
+    showlegends=((False,), (True, True)),
+    xtitles=(r'$ \gamma \ \text{[kN/m} ^3 \text{]} $', r'$ q_c, \ q_t \ \text{[MPa]} $'),
+    ztitle=r'$ z \ \text{[m]} $',
+    xranges=((15, 22), (0, 60)),
+    zrange=(10, 0),
+    fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
 
 
-fig = go.Figure(data=[{'type': 'scatter', 'y': [1,2,3]}])
+#fig = go.Figure(data=[{'type': 'scatter', 'y': [1,2,3]}])
 st.plotly_chart(fig, use_container_width=True)
