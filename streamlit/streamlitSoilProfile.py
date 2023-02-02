@@ -31,15 +31,15 @@ profile_2 = sp.SoilProfile({
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
 
-fig = make_subplots(rows=1, cols=3)
+fig = make_subplots(rows=1, cols=3, subplot_title=('Log','UW','CPT'))
+#
+#
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
                          mode='markers', name='UW'), row=1,col=2)
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'],
                          mode='markers', name='UW'), row=1,col=2)
 #
-fig.add_trace(go.Scatter(x=profile_2['qc from [MPa]'], y=profile_2['Depth to [m]'],
-                         mode='lines+markers', name='qc'), row=1,col=3)
-fig.add_trace(go.Scatter(x=profile_2['qc to [MPa]'], y=profile_2['Depth to [m]'],
+fig.add_trace(go.Scatter(x=profile_2['qt [MPa]'], y=profile_2['Depth to [m]'],
                          mode='lines+markers', name='qc'), row=1,col=3)
 #
 fig.update_yaxes(autorange="reversed")
