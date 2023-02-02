@@ -40,7 +40,7 @@ df = sp.SoilProfile({
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
 
-st.dataframe(df)
+st.dataframe(df, use_container_width=True)
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
