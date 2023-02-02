@@ -44,8 +44,10 @@ profile_2 = sp.SoilProfile({
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
-fig.update_layout(shapes=[dict(type='rect', xref='x', yref='y',
-                               x0=1, y0=1, x1=2, y1=3)])
+for i in range(3):
+    fig.update_layout(shapes=[dict(type='rect', xref='x', yref='y',
+                               x0=profile_2.loc[1, y0=profile_2.loc[i,'Depth from [m]'],
+                               x1=profile_2.loc[2, y1=profile_2.loc[i,'Depth to [m]'])])
 #
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
                          mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
