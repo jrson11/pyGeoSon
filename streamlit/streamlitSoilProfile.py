@@ -17,7 +17,7 @@ st.markdown('## Subsurface Soil Profile')
 st.sidebar.markdown('## Sidebar')
 
 st.sidebar.markdown('### Inputs')
-option = st.selectbox('How would you like to be contacted?',('Email', 'Home phone', 'Mobile phone'))
+option = st.sidebar.selectbox('How would you like to be contacted?',('Previous Example', 'Upload New Data', 'Mobile phone'))
 
 st.sidebar.markdown('### Outputs')
 
