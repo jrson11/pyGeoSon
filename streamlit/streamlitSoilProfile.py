@@ -12,7 +12,7 @@ import plotly.express as px
 #  - Purpose: to develop user friendly GUI of engineering web app
 #  - Author: J.Chang (000@gmail.com)
 #  - Last update:
-st.markdown('## Soil Profile')
+st.markdown('## Subsurface Soil Profile')
 
 st.sidebar.markdown('## Sidebar')
 
@@ -31,7 +31,7 @@ st.sidebar.markdown('### Interpretation')
 #  - Last update: 2/2/2023
 
 ## Initialization
-profile_2 = sp.SoilProfile({
+df = sp.SoilProfile({
     'Depth from [m]': [0, 1, 3, 4],
     'Depth to [m]': [1, 3, 4, 10],
     'Soil type': ['SAND', 'CLAY', 'SILT', 'SAND'],
@@ -40,19 +40,19 @@ profile_2 = sp.SoilProfile({
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
 
-st.dataframe(profile_2)
+st.dataframe(df)
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
 for i in range(len(profile_2)):
-    fig.add_trace(go.Scatter(x=[1,2],y=[profile_2.loc[i,'Depth from [m]'],profile_2.loc[i,'Depth to [m]']]), row=1,col=1)
+    fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
 #
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
+fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth from [m]'],
                          mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'],
+fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth to [m]'],
                          mode='lines+markers', line_shape='hv', name='to', showlegend=False), row=1,col=2)
 #
-fig.add_trace(go.Scatter(x=profile_2['qt [MPa]'], y=profile_2['Depth to [m]'],
+fig.add_trace(go.Scatter(x=df['qt [MPa]'], y=df['Depth to [m]'],
                          mode='lines+markers', name='qt'), row=1,col=3)
 #
 fig.update_yaxes(autorange="reversed")
