@@ -63,7 +63,7 @@ fig.update_traces(hoverinfo='text+name', mode='lines+markers')
 fig.update_layout(legend=dict(y=0.5, traceorder='reversed', font_size=16))
 '''
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=profile_2['Depth to [m]'], y=profile_2['Depth to [m]']))
+fig.add_trace(go.Scatter(x=profile_2['qc to [MPa]'], y=profile_2['Depth to [m]']))
 
 
 st.plotly_chart(fig, use_container_width=True)
