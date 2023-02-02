@@ -14,10 +14,12 @@ import plotly.express as px
 #  - Last update:
 st.markdown('## Soil Profile')
 
-st.sidebar.markdown('## Control Panel')
+st.sidebar.markdown('## Sidebar')
 
 st.sidebar.markdown('### Inputs')
 st.sidebar.markdown('### Outputs')
+st.sidebar.markdown('### Interpretation')
+
 
 
 
