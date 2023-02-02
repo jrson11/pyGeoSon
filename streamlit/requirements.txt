@@ -4,5 +4,7 @@ pandas==1.2.4
 matplotlib==3.4.2
 xlrd==1.2.0
 openpyxl==3.0.3
-plotly==4.7.1
 groundhog==0.6.0
+pyproj>=2.6
+plotly==4.7.1
+
