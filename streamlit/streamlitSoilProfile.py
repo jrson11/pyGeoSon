@@ -30,4 +30,7 @@ profile_2 = sp.SoilProfile({
 })
     
 
-
+from plotly.offline import plot
+import plotly.graph_objs as go
+fig = go.Figure(data=[{'type': 'scatter', 'y': [1,2,3]}])
+plot(fig)
