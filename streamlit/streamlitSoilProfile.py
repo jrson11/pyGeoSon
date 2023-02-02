@@ -63,8 +63,9 @@ fig.update_traces(hoverinfo='text+name', mode='lines+markers')
 fig.update_layout(legend=dict(y=0.5, traceorder='reversed', font_size=16))
 '''
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='hv'))
+fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='hv', name='hv'))
+fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='vh', name='vh'))
 fig.update_yaxes(autorange="reversed")
-fig.update_layout(autosize=False,width=300,height=500)
+fig.update_layout(autosize=False,width=400,height=700)
 
 st.plotly_chart(fig)
