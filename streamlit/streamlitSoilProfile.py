@@ -40,11 +40,10 @@ fig = profile_2.plot_profile(
 '''
 import plotly.express as px
 
-df = pd.DataFrame(dict(
-    x = [1, 3, 2, 4],
-    y = [1, 2, 3, 4]
-))
-fig = px.line(df, x="x", y="y", title="Unsorted Input") 
+import plotly.express as px
+
+df = px.data.stocks()
+fig = px.line(df, x='date', y="GOOG")
 
 
 st.plotly_chart(fig, use_container_width=True)
