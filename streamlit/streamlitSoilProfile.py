@@ -64,6 +64,7 @@ fig.update_layout(legend=dict(y=0.5, traceorder='reversed', font_size=16))
 '''
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth to [m]'], line_shape='hv'))
+fig.update_yaxes(autorange="reversed")
 
 
 st.plotly_chart(fig)
