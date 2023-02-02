@@ -17,3 +17,4 @@ st.markdown('## Soil Profile')
 
 ## Initialization
 from groundhog.general import soilprofile as sp
+profile_1 = sp.read_excel("Data/soilprofile_basic.xlsx")
