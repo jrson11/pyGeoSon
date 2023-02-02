@@ -74,7 +74,7 @@ fig.update_layout(autosize=False,width=400,height=700)
 '''
 
 fig = make_subplots(rows=1, cols=2)
-fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'], line_shape='vh', name='vh2'), row=1,col=1))
+fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'], line_shape='vh', name='vh2'), row=1,col=1)
 
 fig.add_trace(
     go.Scatter(x=[20, 30, 40], y=[50, 60, 70]),
