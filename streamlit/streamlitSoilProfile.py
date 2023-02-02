@@ -35,3 +35,6 @@ fig = profile_2.plot_profile(
     xranges=((15, 22), (0, 60)),
     zrange=(10, 0),
     fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
+    
+st.plotly_chart(fig, use_container_width=True)
+
