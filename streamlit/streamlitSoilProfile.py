@@ -40,7 +40,9 @@ df = sp.SoilProfile({
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
 
-st.dataframe(df, use_container_width=True)
+# Boolean to resize the dataframe, stored as a session state variable
+st.checkbox("Use container width", value=False, key="use_container_width")
+st.dataframe(df, use_container_width=st.session_state.use_container_width)
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
