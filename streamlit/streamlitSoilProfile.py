@@ -40,5 +40,10 @@ fig = profile_2.plot_profile(
 '''
 
 
+from plotly.offline import plot
+import plotly.graph_objs as go
+fig = go.Figure(data=[{'type': 'scatter', 'y': [1,2,3]}])
+plot(fig)
+
 
 st.plotly_chart(fig, use_container_width=True)
