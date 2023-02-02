@@ -4,6 +4,8 @@ import numpy as np
 from groundhog.general import soilprofile as sp
 from plotly.offline import plot
 import plotly.graph_objs as go
+from plotly.subplots import make_subplots
+
 
 # Front-End =============================================
 #  - Purpose: to develop user friendly GUI of engineering web app
