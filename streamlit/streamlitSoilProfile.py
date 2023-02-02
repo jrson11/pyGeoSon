@@ -36,8 +36,6 @@ profile_2 = sp.SoilProfile({
     'Depth to [m]': [1, 3, 4, 10],
     'Soil type': ['SAND', 'CLAY', 'SILT', 'SAND'],
     'Relative density': ['Loose', None, 'Medium dense', 'Dense'],
-    'qc from [MPa]': [3, 1, 4, 40],
-    'qc to [MPa]': [4, 1.5, 8, 50],
     'qt [MPa]': [3.5, 1.25, 6, 45],
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
