@@ -1,9 +1,9 @@
 import streamlit as st
 import numpy as np
-import plotly.figure_factory as ff
-import plotly.graph_objs as go
+#
 from groundhog.general import soilprofile as sp
-
+from plotly.offline import plot
+import plotly.graph_objs as go
 
 # Front-End =============================================
 #  - Purpose: to develop user friendly GUI of engineering web app
@@ -38,7 +38,6 @@ fig = profile_2.plot_profile(
     zrange=(10, 0),
     fillcolordict={'SAND': 'yellow', 'CLAY': 'brown', 'SILT': 'green'})
 
-    
     
 st.plotly_chart(fig, use_container_width=True)
 
