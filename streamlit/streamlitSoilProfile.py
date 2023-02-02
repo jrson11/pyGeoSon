@@ -44,6 +44,8 @@ profile_2 = sp.SoilProfile({
 
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
+fig.update_layout(shapes=[dict(type='rect', xref='x', yref='y',
+                               x0=1, y0=1, x1=2, y1=3)])
 #
 fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['Depth from [m]'],
                          mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
@@ -51,7 +53,7 @@ fig.add_trace(go.Scatter(x=profile_2['Total unit weight [kN/m3]'], y=profile_2['
                          mode='lines+markers', line_shape='hv', name='to', showlegend=False), row=1,col=2)
 #
 fig.add_trace(go.Scatter(x=profile_2['qt [MPa]'], y=profile_2['Depth to [m]'],
-                         mode='lines+markers', name='qc'), row=1,col=3)
+                         mode='lines+markers', name='qt'), row=1,col=3)
 #
 fig.update_yaxes(autorange="reversed")
 fig.update_layout(height=600, width=800, title_text="Side By Side Subplots")
