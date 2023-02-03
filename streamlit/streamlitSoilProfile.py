@@ -51,8 +51,8 @@ st.write('min depth = '+str(zmin)+' / max depth = '+str(zmax))
 st.dataframe(df)
 
 ## Processing - Groundhog is Not working for now
-df2 = df.calculate_overburden()
-st.dataframe(df2)
+df = df.calculate_overburden()
+st.dataframe(df)
 
 #grid = df2.map_soilprofile()
 #st.dataframe(grid)
