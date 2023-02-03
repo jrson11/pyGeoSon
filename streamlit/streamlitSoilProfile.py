@@ -35,7 +35,7 @@ option_depth = st.sidebar.slider('Depth to draw a guideline in plots', 0, 10, 2)
 #  - Author: J.Son (jon.jungrak.son@gmail.com)
 #  - Last update: 2/2/2023
 
-## Initialization
+## Dataframe
 df = sp.SoilProfile({
     'Depth from [m]': [0, 1, 3, 4],
     'Depth to [m]': [1, 3, 4, 10],
@@ -45,9 +45,13 @@ df = sp.SoilProfile({
     'Total unit weight [kN/m3]': [19, 18, 19, 20]
 })
 
-## Dataframe
+zmin = df.min_depth
+zmax = df.max_depth
+
 st.write('### Previous Example Data')
+st.write('min depth = '+str(zmin)+' / max depth = '+str(zmax))
 st.dataframe(df)
+
 
 ## Plotting
 st.write('### Plots')
