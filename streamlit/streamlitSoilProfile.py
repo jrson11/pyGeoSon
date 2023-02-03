@@ -102,7 +102,7 @@ fig['layout']['yaxis']['title']='Depth [m]'
 fig['layout']['xaxis']['title']=' '
 fig['layout']['xaxis2']['title']='γ [kN/m3]'
 fig['layout']['xaxis3']['title']='CPT qt [MPa]'
-fig.update_layout(height=600, width=1000, title_text="")
+fig.update_layout(height=800, widt=800, title_text="")
 fig.update_layout(showlegend=False)
 #
 st.plotly_chart(fig)
