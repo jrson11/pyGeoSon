@@ -76,7 +76,7 @@ for i in range(len(df)):
     #
     fig.add_shape(type='rect',x0=1,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
               line=dict(color='Black',width=2), fillcolor=c, row=1,col=1)
-    fig.add_trace(go.Scatter(x=0.5,y=df.loc[i,'Depth from [m]'], text=df.loc[i,'Soil type'], mode='text'), row=1,col=1)
+    fig.add_trace(go.Scatter(x=[0.5,1],y=[1,2], text=df.loc[i,'Soil type'], mode='text'), row=1,col=1)
                          
 #for i in range(len(df)):
 #    fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
