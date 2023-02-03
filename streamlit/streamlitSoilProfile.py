@@ -61,7 +61,7 @@ st.dataframe(df2)
 
 
 st.write('### Plots')
-fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','Unit Weight','Logging'))
+fig = make_subplots(rows=1, cols=3, subplot_titles=('Subsurface Model','Eng: Unit Weight','Geology: Log'))
 #
 #fig.add_trace(go.Scatter(x=[0,1],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
 for i in range(len(df)):
