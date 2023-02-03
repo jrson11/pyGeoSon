@@ -77,14 +77,13 @@ for i in range(len(df)):
     fig.add_shape(type='rect',x0=1,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
               line=dict(color='Black',width=2),  row=1,col=1)
     fig.add_trace(go.Scatter(x=[1],y=[2], text=df.loc[i,'Soil type'], mode='text'), row=1,col=1)
-                         
-#for i in range(len(df)):
-#    fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
 #
 fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth from [m]'],
-                         mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
+                         mode='lines+markers', line_shape='vh', line=dict(color='RoyalBlue'),
+                         name='from', showlegend=False), row=1,col=2)
 fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth to [m]'],
-                         mode='lines+markers', line_shape='hv', name='to', showlegend=False), row=1,col=2)
+                         mode='lines+markers', line_shape='hv', line=dict(color='RoyalBlue'),
+                         name='to', showlegend=False), row=1,col=2)
 #
 fig.add_trace(go.Scatter(x=df['qt [MPa]'], y=df['Depth to [m]'],
                          mode='lines+markers', name='qt'), row=1,col=3)
