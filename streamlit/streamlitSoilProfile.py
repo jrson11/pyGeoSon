@@ -68,9 +68,9 @@ for i in range(len(df)):
     if df.loc[i,'Soil type'] == 'SAND':
         c = 'Yellow'
     elif df.loc[i,'Soil type'] == 'CLAY':
-        c = 'Brown'
-    elif df.loc[i,'Soil type'] == 'SILT':
         c = 'Green'
+    elif df.loc[i,'Soil type'] == 'SILT':
+        c = 'Brown'
     else:
         c = 'Black'
     #
