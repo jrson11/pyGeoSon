@@ -60,7 +60,7 @@ st.dataframe(df2)
 ## Plotting
 
 
-st.write('### Plots')
+st.write('### Plots: Engineering + Geoscience')
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Subsurface Model','Eng: Unit Weight','Geology: Log'))
 #
 #fig.add_trace(go.Scatter(x=[0,1],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
