@@ -92,7 +92,7 @@ fig.add_trace(go.Scatter(x=df['qt [MPa]'], y=df['Depth to [m]'],
 fig.update_yaxes(autorange="reversed")
 fig['layout']['yaxis']['title']='Depth [m]'
 fig['layout']['xaxis']['title']=' '
-fig['layout']['xaxis2']['title']='%gamma [KN/m3]'
+fig['layout']['xaxis2']['title']='$\gamma [KN/m3]'
 fig['layout']['xaxis3']['title']='CPT qt [MPa]'
 fig.update_layout(height=600, width=800, title_text="")
 #
