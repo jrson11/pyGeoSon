@@ -65,11 +65,11 @@ fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
 #fig.add_trace(go.Scatter(x=[1,2],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
 for i in range(len(df)):
-    if df.loc[i,'Soil type'] == SAND:
+    if df.loc[i,'Soil type'] == 'SAND':
         c = 'Yellow'
-    elif df.loc[i,'Soil type'] == CLAY:
+    elif df.loc[i,'Soil type'] == 'CLAY':
         c = 'Brown'
-    elif df.loc[i,'Soil type'] == SILT:
+    elif df.loc[i,'Soil type'] == 'SILT':
         c = 'Green'
     else:
         c = 'Black'
