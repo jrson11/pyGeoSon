@@ -72,7 +72,7 @@ for i in range(len(df)):
     elif df.loc[i,'Soil type'] == 'SILT':
         c = 'Brown'
     else:
-        c = 'Black'
+        c = 'Grey'
     #
     fig.add_shape(type='rect',x0=0,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
                   line=dict(color='Black',width=2), fillcolor=c, opacity=0.3, row=1,col=1)
