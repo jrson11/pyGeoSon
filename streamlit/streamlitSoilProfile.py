@@ -65,9 +65,10 @@ st.dataframe(df)
 st.write('### Plots')
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
-for i in range(len(df)):
-    fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
-    fig.add_vrect(go.Scatter(x0=1,x1=2,y0=1,y1=5, row=1,col=1)
+fig.add_trace(go.Scatter(x=[1,2],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
+                         
+#for i in range(len(df)):
+#    fig.add_trace(go.Scatter(x=[1,2],y=[df.loc[i,'Depth from [m]'],df.loc[i,'Depth to [m]']]), row=1,col=1)
 #
 fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth from [m]'],
                          mode='lines+markers', line_shape='vh', name='from', showlegend=False), row=1,col=2)
