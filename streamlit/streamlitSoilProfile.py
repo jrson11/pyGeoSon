@@ -10,7 +10,7 @@ import plotly.express as px
 
 # Front-End =============================================
 #  - Purpose: to develop user friendly GUI of engineering web app
-#  - Author: J.Chang (000@gmail.com)
+#  - Author: J.Chang (changjy01 at gmail.com)
 #  - Last update:
 st.markdown('## Subsurface Soil Profile')
 
@@ -30,7 +30,7 @@ option_depth = st.sidebar.slider('Depth to draw a guideline in plots', 0, 10, 2)
 
 # Back-End =============================================
 # - Purpose: to deploy geo engineering skills
-#  - Author: J.Son (jon.jungrak.son@gmail.com)
+#  - Author: J.Son (jon.jungrak.son at gmail.com)
 #  - Last update: 2/2/2023
 
 ## Dataframe
