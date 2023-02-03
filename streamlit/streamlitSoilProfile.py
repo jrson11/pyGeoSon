@@ -75,7 +75,7 @@ for i in range(len(df)):
         c = 'Black'
     #
     fig.add_shape(type='rect',x0=1,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
-              line=dict(color='Black',width=2), shapecolor=c, row=1,col=1)
+              line=dict(color='Black',width=2), fillcolor=c, row=1,col=1)
     fig.add_trace(go.Scatter(x=[1.5],y=[df.loc[i,'Depth from [m]']/2+df.loc[i,'Depth to [m]']/2],
                              text=df.loc[i,'Soil type'], mode='text'), row=1,col=1)
 #
