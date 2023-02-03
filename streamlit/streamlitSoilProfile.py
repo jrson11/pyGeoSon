@@ -14,7 +14,7 @@ import plotly.express as px
 #  - Last update:
 st.markdown('## Subsurface Soil Profile')
 
-st.sidebar.markdown('## Sidebar')
+st.sidebar.markdown('## Control Panel')
 
 st.sidebar.markdown('### Inputs')
 option_input = st.sidebar.selectbox('Which data to use?',('Previous Example', 'Upload New Data'))
