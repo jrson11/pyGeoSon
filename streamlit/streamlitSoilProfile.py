@@ -100,7 +100,7 @@ fig.add_trace(go.Scatter(x=[0,40], y=[option_depth,option_depth],
 fig.update_yaxes(range=[zmax,zmin])
 fig['layout']['yaxis']['title']='Depth [m]'
 fig['layout']['xaxis']['title']=' '
-fig['layout']['xaxis2']['title']='$\gamma [KN/m3]'
+fig['layout']['xaxis2']['title']='γ [kN/m3]'
 fig['layout']['xaxis3']['title']='CPT qt [MPa]'
 fig.update_layout(height=600, width=800, title_text="")
 fig.update_layout(showlegend=False)
