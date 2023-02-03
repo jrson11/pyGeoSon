@@ -74,7 +74,6 @@ for i in range(len(df)):
     else:
         c = 'Black'
     #
-
     fig.add_shape(type='rect',x0=0,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
                   line=dict(color='Black',width=2), fillcolor=c, opacity=0.5, row=1,col=1)
     fig.add_trace(go.Scatter(x=[1],y=[df.loc[i,'Depth from [m]']/2+df.loc[i,'Depth to [m]']/2],
