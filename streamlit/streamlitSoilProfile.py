@@ -61,7 +61,7 @@ st.dataframe(df)
 
 
 st.write('### Plots')
-fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
+fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','Unit Weight','Logging'))
 #
 #fig.add_trace(go.Scatter(x=[0,1],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
 for i in range(len(df)):
@@ -92,8 +92,8 @@ fig.add_trace(go.Scatter(x=df['qt [MPa]'], y=df['Depth to [m]'],
 fig.update_yaxes(autorange="reversed")
 fig['layout']['yaxis']['title']='Depth [m]'
 fig['layout']['xaxis']['title']=' '
-fig['layout']['xaxis2']['title']='[KN/m3]'
-fig['layout']['xaxis3']['title']='[MPa]'
+fig['layout']['xaxis2']['title']='%gamma [KN/m3]'
+fig['layout']['xaxis3']['title']='CPT qt [MPa]'
 fig.update_layout(height=600, width=800, title_text="")
 #
 st.plotly_chart(fig)
