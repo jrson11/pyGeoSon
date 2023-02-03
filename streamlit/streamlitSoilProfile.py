@@ -103,6 +103,7 @@ fig['layout']['xaxis']['title']=' '
 fig['layout']['xaxis2']['title']='$\gamma [KN/m3]'
 fig['layout']['xaxis3']['title']='CPT qt [MPa]'
 fig.update_layout(height=600, width=800, title_text="")
+fig.update_layout(showlegend=False)
 #
 st.plotly_chart(fig)
 
