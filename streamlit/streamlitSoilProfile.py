@@ -30,7 +30,7 @@ option_depth = st.sidebar.slider('Depth to draw a guideline in plots', 0, 10, 2)
 
 # Back-End =============================================
 # - Purpose: to deploy geo engineering skills
-#  - Author: J.Son (jon.jungrak.son at gmail.com)
+#  - Author: J.Son (glocivilngneer at gmail.com)
 #  - Last update: 2/2/2023
 
 ## Dataframe
