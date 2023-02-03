@@ -66,7 +66,7 @@ fig = make_subplots(rows=1, cols=3, subplot_titles=('Subsurface Model','Unit Wei
 #fig.add_trace(go.Scatter(x=[0,1],y=[1,1], text=['un','fill'], mode='text'), row=1,col=1)
 for i in range(len(df)):
     if df.loc[i,'Soil type'] == 'SAND':
-        c = 'LightYellow'
+        c = 'Yellow'
     elif df.loc[i,'Soil type'] == 'CLAY':
         c = 'Brown'
     elif df.loc[i,'Soil type'] == 'SILT':
@@ -75,7 +75,7 @@ for i in range(len(df)):
         c = 'Black'
     #
     fig.add_shape(type='rect',x0=0,y0=df.loc[i,'Depth from [m]'],x1=2,y1=df.loc[i,'Depth to [m]'],
-                  line=dict(color='Black',width=2), fillcolor=c, opacity=0.5, row=1,col=1)
+                  line=dict(color='Black',width=2), fillcolor=c, opacity=0.3, row=1,col=1)
     fig.add_trace(go.Scatter(x=[1],y=[df.loc[i,'Depth from [m]']/2+df.loc[i,'Depth to [m]']/2],
                              text=df.loc[i,'Soil type'], mode='text'), row=1,col=1)
 fig.add_trace(go.Scatter(x=[0,2], y=[option_depth,option_depth],
