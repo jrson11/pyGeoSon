@@ -85,7 +85,8 @@ fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth from [m]
 fig.add_trace(go.Scatter(x=df['Total unit weight [kN/m3]'], y=df['Depth to [m]'],
                          mode='lines+markers', line_shape='hv', line=dict(color='RoyalBlue'),
                          name='to', showlegend=False), row=1,col=2)
-fig.add_trace(go.Scatter(x=[18,20], y=[option_depth,option_depth], line=dict(color='Red')), row=1,col=2)
+fig.add_trace(go.Scatter(x=[18,20], y=[option_depth,option_depth],
+                         mode='lines', line=dict(color='Red',dash='dash')), row=1,col=2)
 #
 fig.add_trace(go.Scatter(x=df['qt [MPa]'], y=df['Depth to [m]'],
                          mode='lines+markers', name='qt'), row=1,col=3)
