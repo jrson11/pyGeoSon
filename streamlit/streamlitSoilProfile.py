@@ -18,6 +18,7 @@ st.sidebar.markdown('## Sidebar')
 
 st.sidebar.markdown('### Inputs')
 option_input = st.sidebar.selectbox('Which data to use?',('Previous Example', 'Upload New Data'))
+option_output = st.sidebar.button('Download the example')
 
 st.sidebar.markdown('### Outputs')
 option_output = st.sidebar.button('Download the result')
