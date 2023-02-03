@@ -56,7 +56,20 @@ st.dataframe(df)
 df2 = df.calculate_overburden()
 st.dataframe(df2)
 
+grid = df2.map_soilprofile()
+st.dataframe(grid)
+
 ## Plotting
+fig = df.plot_profile(
+    parameters=((),),
+    zrange=(10,0))
+st.plotly_chart(fig)
+
+   
+
+
+
+
 st.write('### Plots')
 fig = make_subplots(rows=1, cols=3, subplot_titles=('Log','UW','CPT'))
 #
