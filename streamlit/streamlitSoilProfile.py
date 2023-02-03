@@ -52,6 +52,9 @@ st.write('### Previous Example Data')
 st.write('min depth = '+str(zmin)+' / max depth = '+str(zmax))
 st.dataframe(df)
 
+## Processing
+df2 = df.calculate_overburden()
+st.dataframe(df2)
 
 ## Plotting
 st.write('### Plots')
